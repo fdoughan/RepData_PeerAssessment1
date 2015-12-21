@@ -59,8 +59,7 @@ and plot the time series
 pow2<-aggregate(act1$steps~act1$interval,act1, mean)#Average daily activity                                                            pattern
                                                      
 names(pow2)<- c("interval","steps")
-plot(pow2$interval,pow2$steps, type="l",xlab="interval",ylab="Ave Steps Per
-interval",main= "Average Daily Activity Graph",at = seq(from=0,
+plot(pow2$interval,pow2$steps, type="l",xlab="interval",ylab="Ave Steps",main= "Average Daily Activity Graph",at = seq(from=0,
 to=max(pow2$interval),by=5))
 ```
 
@@ -159,7 +158,6 @@ head(act22)
 Now the "Weekdays" and "Weekends" showing
 
 ```{r}
-
 happy<- c("Saturday","Sunday")#Weekend vector
 
  weeke<- act22$date==happy
